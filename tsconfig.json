@@ -18,8 +18,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["packages/*/src"],
+      "@apps/*": ["apps/*/src"]
+    }
   },
-  "include": ["src", "lib"],
+  "include": ["apps", "packages"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
